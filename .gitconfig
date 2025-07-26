@@ -1,0 +1,8 @@
+[user]
+	email = tuan.au@bioturing.com
+	name = Tuan Au Duong
+	emamil = audtuan@gmail.com
+[core]
+	ignorecase = false
+[push]
+	autoSetupRemote = true

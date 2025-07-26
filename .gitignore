@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+*~
+
+# Sensitive data
+.config/configstore/
+.config/github-copilot/
+.config/gh/hosts.yml
+
+# Cache directories
+.config/*/cache/
+.config/*/Cache/
+
+# Log files
+*.log
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode/
+.idea/
+
+# Fish shell generated files
+.config/fish/fish_variables
