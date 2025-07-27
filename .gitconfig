@@ -4,5 +4,29 @@
 	emamil = audtuan@gmail.com
 [core]
 	ignorecase = false
+	excludesfile = /Users/mac/.gitignore_global
 [push]
 	autoSetupRemote = true
+[alias]
+	# Basic shortcuts
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	ca = commit -a
+	cm = commit -m
+	cam = commit -am
+	
+	# Add and push shortcuts
+	a = add .
+	p = push origin HEAD
+	pl = pull
+	
+	# Combined workflows
+	acp = !git add . && git commit -m \"$1\" && git push origin HEAD
+	
+	# Useful shortcuts
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+	lg = log --oneline --graph --decorate

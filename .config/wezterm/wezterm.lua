@@ -68,6 +68,8 @@ end
 config.window_background_opacity = 0.85
 config.macos_window_background_blur = 10
 
+config.window_decorations = "RESIZE"
+
 -- Enable enhanced key protocol for better key handling
 config.enable_kitty_keyboard = true
 

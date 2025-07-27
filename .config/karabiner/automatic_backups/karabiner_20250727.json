@@ -25,6 +25,7 @@
                     },
                     {
                         "description": "Change hyper-(b) to (delete) keys",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {

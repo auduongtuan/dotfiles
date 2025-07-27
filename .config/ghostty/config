@@ -1,10 +1,16 @@
-command = ~/.dotfiles/.local/bin/tmux-start
+# Temporarily disable tmux auto-start for testing
+# command = ~/.dotfiles/.local/bin/tmux-start
+command = /opt/homebrew/bin/fish
 shell-integration = none
+
+# Tab configuration
+window-new-tab-position = end
+macos-titlebar-style = tabs
 
 # Terminal settings for better nushell experience
 # shell-integration-features = cursor,sudo,title
 # keybind = shift+enter=text:\n
-macos-titlebar-style = hidden
+# macos-titlebar-style = hidden
 # macos-titlebar-style = hidden
 macos-option-as-alt = true
 theme = CutiePro
@@ -18,17 +24,17 @@ focus-follows-mouse = true
 link-url = true
 unfocused-split-opacity = 1
 
-# Tmux integration keybindings
-keybind = super+t=text:\x01c
-keybind = super+shift+left_bracket=text:\x01p
-keybind = super+shift+right_bracket=text:\x01n
-keybind = super+w=text:\x01&
-keybind = super+1=text:\x011
-keybind = super+2=text:\x012
-keybind = super+3=text:\x013
-keybind = super+4=text:\x014
-keybind = super+5=text:\x015
-keybind = super+6=text:\x016
-keybind = super+7=text:\x017
-keybind = super+8=text:\x018
-keybind = super+9=text:\x019
+# Tmux integration keybindings (commented out for testing)
+# keybind = super+t=text:\x01c
+# keybind = super+shift+left_bracket=text:\x01p
+# keybind = super+shift+right_bracket=text:\x01n
+# keybind = super+w=text:\x01&
+# keybind = super+1=text:\x011
+# keybind = super+2=text:\x012
+# keybind = super+3=text:\x013
+# keybind = super+4=text:\x014
+# keybind = super+5=text:\x015
+# keybind = super+6=text:\x016
+# keybind = super+7=text:\x017
+# keybind = super+8=text:\x018
+# keybind = super+9=text:\x019

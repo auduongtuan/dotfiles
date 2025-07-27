@@ -9,7 +9,7 @@
 
 ^/README.*
 ^/LICENSE.*
-^/.gitignore.*
+^/.gitignore$
 ^/bootstrap.*
 
 # Claude machine-specific files

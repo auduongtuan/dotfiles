@@ -1,5 +1,5 @@
 # Global gitignore file
 # Add patterns here that should be ignored in all repositories
 
-# Serana folders
-.serana/
+# Serena folders
+.serena/

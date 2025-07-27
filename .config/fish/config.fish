@@ -50,3 +50,29 @@ zoxide init fish | source
 fzf --fish | source
 
 string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
+
+# Git aliases
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push origin HEAD'
+alias gpl='git pull'
+alias gco='git checkout'
+alias gbr='git branch'
+
+# Git workflow functions
+function gacp
+    if test (count $argv) -eq 0
+        echo "Usage: gacp 'commit message'"
+        return 1
+    end
+    git add . && git commit -m "$argv[1]" && git push origin HEAD
+end
+
+function qc
+    if test (count $argv) -eq 0
+        git add . && git commit -m "feat: update $(date '+%Y-%m-%d %H:%M')" && git push origin HEAD
+    else
+        git add . && git commit -m "$argv[1]" && git push origin HEAD
+    end
+end
