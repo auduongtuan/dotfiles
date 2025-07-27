@@ -11,3 +11,6 @@
 ^/LICENSE.*
 ^/.gitignore.*
 ^/bootstrap.*
+
+# Claude machine-specific files
+\.claude/settings\.local\.json

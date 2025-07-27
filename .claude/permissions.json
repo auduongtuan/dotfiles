@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(pwd:*)",
+      "Bash(which:*)",
+      "Bash(type:*)",
+      "Bash(file:*)",
+      "Bash(stat:*)",
+      "Bash(wc:*)",
+      "Bash(sort:*)",
+      "Bash(uniq:*)",
+      "Bash(cut:*)",
+      "Bash(awk:*)",
+      "Bash(sed:*)"
+    ],
+    "deny": []
+  }
+}
