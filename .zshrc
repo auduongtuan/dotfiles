@@ -112,7 +112,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # pnpm
-export PNPM_HOME="/Users/mac/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -123,27 +123,27 @@ esac
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 
 # Added by Windsurf
-export PATH="/Users/mac/.codeium/windsurf/bin:$PATH"
+export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 
 # Add Python
-export PATH="$PATH:/Users/mac/Library/Python/3.9/bin"
+export PATH="$PATH:$HOME/Library/Python/3.9/bin"
 
 # Added by Windsurf
-export PATH="/Users/mac/.codeium/windsurf/bin:$PATH"
+export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 
 # bun completions
-[ -s "/Users/mac/.bun/_bun" ] && source "/Users/mac/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Added by Windsurf
-export PATH="/Users/mac/.codeium/windsurf/bin:$PATH"
+export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 
 source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 zstyle -e ':autocomplete:*:*' list-lines 'reply=( $(( LINES / 3 )) )'
-alias claude="/Users/mac/.claude/local/claude"
+alias claude="$HOME/.claude/local/claude"
 # eval "$(starship init zsh)"
 
 # # Fun cowsay on terminal startup
@@ -168,9 +168,9 @@ alias claude="/Users/mac/.claude/local/claude"
 # fun_cowsay
 
 # fnm
-FNM_PATH="/Users/mac/Library/Application Support/fnm"
+FNM_PATH="$HOME/Library/Application Support/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="/Users/mac/Library/Application Support/fnm:$PATH"
+  export PATH="$HOME/Library/Application Support/fnm:$PATH"
   eval "`fnm env`"
 fi
 
@@ -180,3 +180,30 @@ if [[ -z "$TMUX" ]] && command -v zoxide >/dev/null 2>&1; then
 fi
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+# Git aliases and functions
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push origin HEAD'
+alias gpl='git pull'
+alias gco='git checkout'
+alias gbr='git branch'
+
+# Combined git workflow functions
+gacp() {
+    if [ -z "$1" ]; then
+        echo "Usage: gacp 'commit message'"
+        return 1
+    fi
+    git add . && git commit -m "$1" && git push origin HEAD
+}
+
+# Quick commit with smart defaults
+qc() {
+    if [ -z "$1" ]; then
+        git add . && git commit -m "feat: update $(date '+%Y-%m-%d %H:%M')" && git push origin HEAD
+    else
+        git add . && git commit -m "$1" && git push origin HEAD
+    fi
+}
