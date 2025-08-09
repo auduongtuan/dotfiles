@@ -3,3 +3,6 @@
 
 # Serena folders
 .serena/
+
+# Claude folders (contains local settings and project configs)
+.claude/

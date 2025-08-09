@@ -45,11 +45,11 @@ function fish_greeting
     fortune -s | cowsay -f $random_character | lolcat
 end
 
-starship init fish | source
+# starship init fish | source
 zoxide init fish | source
 fzf --fish | source
 
-string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
+# string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
 
 # Git aliases
 alias gs='git status'
@@ -76,3 +76,8 @@ function qc
         git add . && git commit -m "$argv[1]" && git push origin HEAD
     end
 end
+
+# Atlassian CLI aliases
+alias rdev='acli robodev run'
+alias rd='acli robodev run'
+alias robo='acli rovodev run'

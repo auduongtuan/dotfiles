@@ -144,6 +144,8 @@ export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 zstyle -e ':autocomplete:*:*' list-lines 'reply=( $(( LINES / 3 )) )'
 alias claude="$HOME/.claude/local/claude"
+alias cl="claude"
+alias gm="gemini"
 # eval "$(starship init zsh)"
 
 # # Fun cowsay on terminal startup
@@ -209,3 +211,8 @@ qc() {
 }
 
 . "$HOME/.local/bin/env"
+
+# Atlassian CLI aliases
+alias rdev='acli robodev run'
+alias rd='acli robodev run'
+alias robo='acli rovodev run'

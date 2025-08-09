@@ -1,9 +1,11 @@
-# STRICT REQUIREMENTS - MUST FOLLOW
+# CRITICAL REQUIREMENTS - VIOLATION IS UNACCEPTABLE
 
-## Git Commits
-- **MANDATORY**: Write commit messages in one line only
-- **MANDATORY**: NEVER include Claude credits, AI attribution, or "Generated with Claude" text
-- **MANDATORY**: Use conventional commit format: `type: description`
+## Git Commits & Pull Requests
+- **ABSOLUTE RULE**: Write commit messages in one line only - NO EXCEPTIONS
+- **ABSOLUTE RULE**: NEVER include Claude credits, AI attribution, or "Generated with Claude" text in commits OR PRs - THIS IS FORBIDDEN
+- **ABSOLUTE RULE**: Use conventional commit format: `type: description` - REQUIRED FORMAT
+- **ABSOLUTE RULE**: Always check and follow project-specific CLAUDE.md instructions - MANDATORY
+- **ABSOLUTE RULE**: PR descriptions should be clean and professional without AI attribution - MANDATORY
 
 ## Package Management
 - **MANDATORY**: Use `ni` (@antfu/ni) for automatic package manager detection
